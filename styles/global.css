@@ -15,6 +15,8 @@ body {
   background-color: var(--body-bg-color);
   color: var(--text-color);
   padding: 24px;
+  display: flex;
+  gap: 60px;
 }
 
 html {
@@ -22,10 +24,16 @@ html {
 }
 
 main {
+  flex: 1;
+  width: 100%;
   display: flex;
 }
 
-header {
+.card-shadowed {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+aside {
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -146,4 +154,109 @@ header {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+#profile-my-projects {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#profile-my-projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-cards);
+  color: var(--text-color);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+#profile-my-projects-header h1{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#profile-my-projects-header span{
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#profile-my-projects-main {
+  display: flex;
+  flex-flow: wrap;
+  gap: 30px;
+}
+
+#profile-my-projects-main .project {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-cards);
+  color: var(--text-color);
+  border-radius: 20px;
+  padding: 30px;
+}
+
+#profile-my-projects-main .project .project-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+#profile-my-projects-main .project .project-header h1{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#profile-my-projects-main .project .project-main {
+  margin-bottom: 22px;
+}
+
+#profile-my-projects-main .project .project-main span {
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#profile-my-projects-main .project .project-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#profile-my-projects-main .project .project-footer .project-footer-stats {
+  display: flex;
+  gap: 16px;
+}
+
+#profile-my-projects-main .project .project-footer .project-footer-stats .project-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#profile-my-projects-main .project .project-footer .project-footer-stats .project-stats span{
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#profile-my-projects-main .project .project-footer .project-footer-language {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#profile-my-projects-main .project .project-footer .project-footer-language span{
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#profile-my-projects-main .project .project-footer .project-footer-language .elipse {
+  width: 15px;
+  height: 15px;
+  background-color: #e7de79;
+  border-radius: 50%;
+  border: 2px solid #837e9f;
 }
