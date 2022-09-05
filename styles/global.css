@@ -2,7 +2,9 @@
   --body-bg-color: #22212c;
   --text-color: #837e9f;
   --bg-cards: #302f3d;
-  --bg-techs: #cb92b1;
+  --bg-techs: #8257e5;
+  --bg-techs-hover: #996dff;
+  --text-techs: #fff;
 }
 
 * {
@@ -131,9 +133,14 @@ aside {
   text-align: center;
   border-radius: 30px;
   background-color: var(--bg-techs);
-  color: #000;
+  color: var(--text-techs);
   font-size: 10px;
   font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+#profile-technologies div span:hover {
+  background-color: var(--bg-techs-hover);
 }
 
 #profile-education {
