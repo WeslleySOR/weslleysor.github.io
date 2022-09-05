@@ -101,6 +101,10 @@ aside {
   width: 100%;
 }
 
+#profile-social-media div a{
+  margin-left: auto;
+}
+
 #profile-social-media div span {
   font-size: 13px;
   font-weight: normal;
@@ -121,7 +125,7 @@ aside {
   width: 100%;
   display: flex;
   flex-flow: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 #profile-technologies div span {
@@ -131,7 +135,7 @@ aside {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: var(--bg-techs);
   color: var(--text-techs);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

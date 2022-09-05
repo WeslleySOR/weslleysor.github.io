@@ -17,47 +17,53 @@
   </head>
   <body>
     <aside>
-      <div id="profile-picture-name-and-occupationarea" class="card-shadowed">
+      <div id="profile-picture-name-and-occupationarea" class="card-shadowed" aria-label="Minha foto, nome e ocupação.">
         <img
           src="https://avatars.githubusercontent.com/u/68085898?v=4"
           alt="WeslleySOR Github Profile Pic"
         />
         <div>
-          <h1>Weslley S. O. Ruas</h1>
-          <h2>Frontend Developer</h2>
+          <h1 aria-label="Meu nome completo, com os nomes do meio abreviados.">Weslley S. O. Ruas</h1>
+          <h2 aria-label="Minha ocupação.">Frontend Developer</h2>
         </div>
       </div>
-      <div id="profile-social-media" class="card-shadowed">
+      <div id="profile-social-media" class="card-shadowed" aria-label="Minhas redes sociais.">
         <div>
           <img src="./assets/map-pin.svg" alt="" />
-          <span>Brasil</span>
+          <span aria-label="País onde moro.">Brasil</span>
         </div>
         <div>
           <img src="./assets/briefcase.svg" alt="" />
-          <span>Livre</span>
+          <span aria-label="Minha disponibilidade para emprego.">Livre</span>
+        </div>
+        <div>
+          <img src="./assets/mail.svg" alt="" />
+          <span aria-label="Meu email para contato.">weslleysordev@gmail.com</span>
         </div>
         <div>
           <img src="./assets/github.svg" alt="" />
-          <span>WeslleySOR</span>
+          <span aria-label="Meu usuário do github.">WeslleySOR</span>
+          <a href="https://github.com/WeslleySOR" target="_blank" aria-label="Navegar até meu github.">
+            <img src="./assets/link.svg" alt="">
+          </a>
         </div>
         <div>
           <img src="./assets/linkedin.svg" alt="" />
-          <span>weslleysor</span>
+          <span aria-label="Meu usuário do linkedin.">weslleysor</span>
+          <a href="https://www.linkedin.com/in/weslleysor/" target="_blank" aria-label="Navegar até meu linkedin.">
+            <img src="./assets/link.svg" alt="">
+          </a>
         </div>
-        <div>
+        <!-- <div>
           <img src="./assets/twitter.svg" alt="" />
           <span>*Não tenho*</span>
         </div>
         <div>
           <img src="./assets/globe.svg" alt="" />
           <span>https://github.com/WeslleySOR</span>
-        </div>
-        <div>
-          <img src="./assets/mail.svg" alt="" />
-          <span>weslleysordev@gmail.com</span>
-        </div>
+        </div> -->
       </div>
-      <div id="profile-technologies" class="card-shadowed">
+      <div id="profile-technologies" class="card-shadowed" aria-label="Tecnologias que possuo conhecimento.">
         <h1>Tecnologias</h1>
         <div>
           <span>HTML</span>
@@ -79,7 +85,7 @@
           <span>STICHESJS</span>
         </div>
       </div>
-      <div id="profile-education" class="card-shadowed">
+      <div id="profile-education" class="card-shadowed" aria-label="Meus cursos.">
         <h1>Educação</h1>
         <ul>
           <li>
@@ -93,7 +99,7 @@
       </div>
     </aside>
     <main>
-      <div id="profile-my-projects">
+      <div id="profile-my-projects" aria-label="Projetos que considero importantes.">
         <div id="profile-my-projects-header" class="card-shadowed">
           <h1>Meus Projetos</h1>
           <a
@@ -103,7 +109,7 @@
             >Veja todos</a
           >
         </div>
-        <div id="profile-my-projects-main"></div>
+        <div id="profile-my-projects-main" aria-label="Área onde estão os projetos."></div>
       </div>
     </main>
   </body>
