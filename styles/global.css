@@ -41,7 +41,7 @@ aside {
   gap: 28px;
 }
 
-#section-profile {
+#profile-picture-name-and-occupationarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,14 +54,14 @@ aside {
   gap: 48px;
 }
 
-#section-profile img {
+#profile-picture-name-and-occupationarea img {
   height: 128px;
   width: 128px;
   border-radius: 50%;
   border: 2px solid #00ff00;
 }
 
-#section-profile article {
+#profile-picture-name-and-occupationarea div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,17 +69,17 @@ aside {
   gap: 8px;
 }
 
-#section-profile article h1 {
+#profile-picture-name-and-occupationarea div h1 {
   font-size: 23px;
   font-weight: bold;
 }
 
-#section-profile article h2 {
+#profile-picture-name-and-occupationarea div h2 {
   font-size: 13px;
   font-weight: light;
 }
 
-#section-links {
+#profile-social-media {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +90,7 @@ aside {
   background-color: var(--bg-cards);
 }
 
-#section-links article {
+#profile-social-media div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -99,12 +99,12 @@ aside {
   width: 100%;
 }
 
-#section-links article span {
+#profile-social-media div span {
   font-size: 13px;
   font-weight: normal;
 }
 
-#section-technologies {
+#profile-technologies {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -115,14 +115,14 @@ aside {
   background-color: var(--bg-cards);
 }
 
-#section-technologies div {
+#profile-technologies div {
   width: 100%;
   display: flex;
   flex-flow: wrap;
   gap: 8px;
 }
 
-#section-technologies div article {
+#profile-technologies div span {
   width: 128px;
   padding: 8px;
   display: flex;
@@ -136,7 +136,7 @@ aside {
   font-weight: bold;
 }
 
-#section-education {
+#profile-education {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -147,12 +147,12 @@ aside {
   background-color: var(--bg-cards);
 }
 
-#section-education ul {
+#profile-education ul {
   align-self: center;
   margin-block: 20px;
 }
 
-#section-education ul div {
+#profile-education ul div {
   display: flex;
   flex-direction: column;
   gap: 20px;
