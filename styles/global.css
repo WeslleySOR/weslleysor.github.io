@@ -215,6 +215,11 @@ aside {
   font-weight: bold;
 }
 
+#profile-my-projects-main .project .project-header a{
+  text-decoration: none;
+  margin-left: auto;
+}
+
 #profile-my-projects-main .project .project-main {
   margin-bottom: 22px;
 }

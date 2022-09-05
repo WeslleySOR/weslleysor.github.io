@@ -38,8 +38,18 @@ Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
     projectHeaderFolderIcon.setAttribute("alt", "");
     var projectHeaderTitle = document.createElement("h1");
     projectHeaderTitle.innerHTML = data.name;
+    if(data.homepage !== "") {
+      var projectHeaderDeployLink = document.createElement("a");
+      projectHeaderDeployLink.setAttribute("href", data.homepage);
+      projectHeaderDeployLink.setAttribute("target", "_blank");
+      var projectHeaderDeployLinkIcon = document.createElement("img");
+      projectHeaderDeployLinkIcon.setAttribute("src", "./assets/link.svg");
+      projectHeaderDeployLinkIcon.setAttribute("alt", "");
+      projectHeaderDeployLink.appendChild(projectHeaderDeployLinkIcon);
+    }
     projectHeader.appendChild(projectHeaderFolderIcon);
     projectHeader.appendChild(projectHeaderTitle);
+    if(data.homepage !== "") projectHeader.appendChild(projectHeaderDeployLink);
 
     var projectMainDescription = document.createElement("span")
     projectMainDescription.innerHTML = data.description;
