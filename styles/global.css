@@ -1,8 +1,8 @@
 :root {
-  --body-bg-color: #22212C;
-  --text-color: #837E9F;
-  --bg-cards: #302F3D;
-  --bg-techs: #CB92B1;
+  --body-bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-cards: #302f3d;
+  --bg-techs: #cb92b1;
 }
 
 * {
@@ -90,7 +90,7 @@ aside {
   background-color: var(--bg-cards);
 }
 
-#section-links article{
+#section-links article {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -99,7 +99,7 @@ aside {
   width: 100%;
 }
 
-#section-links article span{
+#section-links article span {
   font-size: 13px;
   font-weight: normal;
 }
@@ -144,7 +144,7 @@ aside {
   border-radius: 20px;
   padding: 24px;
   gap: 20px;
-  background-color: var(--bg-cards); 
+  background-color: var(--bg-cards);
 }
 
 #section-education ul {
@@ -175,16 +175,20 @@ aside {
   padding: 30px;
 }
 
-#profile-my-projects-header h1{
+#profile-my-projects-header h1 {
   font-size: 20px;
   font-weight: bold;
 }
 
-#profile-my-projects-header a{
+#profile-my-projects-header a {
   color: var(--text-color);
-  text-decoration: none;
   font-size: 14px;
   font-weight: normal;
+  transition: filter 0.2s;
+}
+
+#profile-my-projects-header a:hover {
+  filter: brightness(0.75);
 }
 
 #profile-my-projects-main {
@@ -210,13 +214,21 @@ aside {
   margin-bottom: 20px;
 }
 
-#profile-my-projects-main .project .project-header h1{
-  font-size: 16px;
-  font-weight: bold;
+#profile-my-projects-main .project .project-header a {
+  transition: filter 0.2s;
 }
 
-#profile-my-projects-main .project .project-header a{
-  text-decoration: none;
+#profile-my-projects-main .project .project-header a:hover {
+  filter: brightness(0.75);
+}
+
+#profile-my-projects-main .project .project-header a.repo-link {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+#profile-my-projects-main .project .project-header a.deploy-link {
   margin-left: auto;
 }
 
@@ -241,13 +253,22 @@ aside {
   gap: 16px;
 }
 
-#profile-my-projects-main .project .project-footer .project-footer-stats .project-stats {
+#profile-my-projects-main
+  .project
+  .project-footer
+  .project-footer-stats
+  .project-stats {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-#profile-my-projects-main .project .project-footer .project-footer-stats .project-stats span{
+#profile-my-projects-main
+  .project
+  .project-footer
+  .project-footer-stats
+  .project-stats
+  span {
   font-size: 14px;
   font-weight: normal;
 }
@@ -258,12 +279,20 @@ aside {
   gap: 8px;
 }
 
-#profile-my-projects-main .project .project-footer .project-footer-language span{
+#profile-my-projects-main
+  .project
+  .project-footer
+  .project-footer-language
+  span {
   font-size: 14px;
   font-weight: normal;
 }
 
-#profile-my-projects-main .project .project-footer .project-footer-language .elipse {
+#profile-my-projects-main
+  .project
+  .project-footer
+  .project-footer-language
+  .elipse {
   width: 15px;
   height: 15px;
   background-color: rgba(49, 120, 198, 0.5);

@@ -10,15 +10,16 @@ const urls = [
 Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
   responses.map(async (response) => {
     const data = await response.json();
-    console.log(data)
-    const branchCounter = await fetch(`https://api.github.com/repos/${data.owner.login}/${data.name}/branches?per_page=100&page=1`)
-      .then(async(res) => {
-        const resData = await res.json();
-        return resData.length
-    })
+    console.log(data);
+    const branchCounter = await fetch(
+      `https://api.github.com/repos/${data.owner.login}/${data.name}/branches?per_page=100&page=1`
+    ).then(async (res) => {
+      const resData = await res.json();
+      return resData.length;
+    });
 
     var projectsFather = document.getElementById("profile-my-projects-main");
-    
+
     var projectCard = document.createElement("div");
     projectCard.setAttribute("class", "project card-shadowed");
     projectsFather.appendChild(projectCard);
@@ -36,22 +37,40 @@ Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
     var projectHeaderFolderIcon = document.createElement("img");
     projectHeaderFolderIcon.setAttribute("src", "./assets/folder.svg");
     projectHeaderFolderIcon.setAttribute("alt", "");
-    var projectHeaderTitle = document.createElement("h1");
+    var projectHeaderTitle = document.createElement("a");
+    projectHeaderTitle.setAttribute("href", data.html_url);
+    projectHeaderTitle.setAttribute("target", "_blank");
+    projectHeaderTitle.setAttribute(
+      "aria-label",
+      "Navegar até o link do repo do projeto."
+    );
+    projectHeaderTitle.setAttribute(
+      "class",
+      "repo-link"
+    );
     projectHeaderTitle.innerHTML = data.name;
-    if(data.homepage !== "") {
+    if (data.homepage !== "") {
       var projectHeaderDeployLink = document.createElement("a");
       projectHeaderDeployLink.setAttribute("href", data.homepage);
       projectHeaderDeployLink.setAttribute("target", "_blank");
+      projectHeaderDeployLink.setAttribute(
+        "class",
+        "deploy-link"
+      );
       var projectHeaderDeployLinkIcon = document.createElement("img");
       projectHeaderDeployLinkIcon.setAttribute("src", "./assets/link.svg");
-      projectHeaderDeployLinkIcon.setAttribute("alt", "");
+      projectHeaderDeployLinkIcon.setAttribute(
+        "alt",
+        "Link para navegar até a pagina do projeto."
+      );
       projectHeaderDeployLink.appendChild(projectHeaderDeployLinkIcon);
     }
     projectHeader.appendChild(projectHeaderFolderIcon);
     projectHeader.appendChild(projectHeaderTitle);
-    if(data.homepage !== "") projectHeader.appendChild(projectHeaderDeployLink);
+    if (data.homepage !== "")
+      projectHeader.appendChild(projectHeaderDeployLink);
 
-    var projectMainDescription = document.createElement("span")
+    var projectMainDescription = document.createElement("span");
     projectMainDescription.innerHTML = data.description;
     projectMain.appendChild(projectMainDescription);
 
@@ -92,6 +111,5 @@ Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
 
     projectFooterLanguage.appendChild(projectFooterLanguageElipse);
     projectFooterLanguage.appendChild(projectFooterLanguageText);
-
   });
 });
