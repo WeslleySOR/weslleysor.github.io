@@ -10,7 +10,13 @@ const urls = [
 Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
   responses.map(async (response) => {
     const data = await response.json();
-    console.log(data);
+    console.log(data)
+    const branchCounter = await fetch(`https://api.github.com/repos/${data.owner.login}/${data.name}/branches?per_page=100&page=1`)
+      .then(async(res) => {
+        const resData = await res.json();
+        return resData.length
+    })
+
     var projectsFather = document.getElementById("profile-my-projects-main");
     
     var projectCard = document.createElement("div");
@@ -62,7 +68,7 @@ Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
     projectFooterStatsBranchIcon.setAttribute("src", "./assets/git-branch.svg");
     projectFooterStatsBranchIcon.setAttribute("alt", "");
     var projectFooterStatsBranchText = document.createElement("span");
-    projectFooterStatsBranchText.innerHTML = "100";
+    projectFooterStatsBranchText.innerHTML = branchCounter;
     projectFooterStatsBranch.appendChild(projectFooterStatsBranchIcon);
     projectFooterStatsBranch.appendChild(projectFooterStatsBranchText);
 
