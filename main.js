@@ -10,7 +10,6 @@ const urls = [
 Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
   responses.map(async (response) => {
     const data = await response.json();
-    console.log(data);
     const branchCounter = await fetch(
       `https://api.github.com/repos/${data.owner.login}/${data.name}/branches?per_page=100&page=1`
     ).then(async (res) => {
