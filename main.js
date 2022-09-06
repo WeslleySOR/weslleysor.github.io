@@ -41,7 +41,7 @@ Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
     projectHeaderTitle.setAttribute("target", "_blank");
     projectHeaderTitle.setAttribute(
       "aria-label",
-      "Navegar até o link do repo do projeto."
+      "Link para navegar até a página do repositório do projeto."
     );
     projectHeaderTitle.setAttribute(
       "class",
@@ -52,6 +52,7 @@ Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
       var projectHeaderDeployLink = document.createElement("a");
       projectHeaderDeployLink.setAttribute("href", data.homepage);
       projectHeaderDeployLink.setAttribute("target", "_blank");
+      projectHeaderDeployLink.setAttribute("aria-label", "Link para navegar até a pagina do projeto.")
       projectHeaderDeployLink.setAttribute(
         "class",
         "deploy-link"
@@ -60,7 +61,7 @@ Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
       projectHeaderDeployLinkIcon.setAttribute("src", "./assets/link.svg");
       projectHeaderDeployLinkIcon.setAttribute(
         "alt",
-        "Link para navegar até a pagina do projeto."
+        "Icone de navegação à links externos."
       );
       projectHeaderDeployLink.appendChild(projectHeaderDeployLinkIcon);
     }
