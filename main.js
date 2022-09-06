@@ -43,20 +43,17 @@ Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
       "aria-label",
       "Link para navegar até a página do repositório do projeto."
     );
-    projectHeaderTitle.setAttribute(
-      "class",
-      "repo-link"
-    );
+    projectHeaderTitle.setAttribute("class", "repo-link");
     projectHeaderTitle.innerHTML = data.name;
     if (data.homepage !== "") {
       var projectHeaderDeployLink = document.createElement("a");
       projectHeaderDeployLink.setAttribute("href", data.homepage);
       projectHeaderDeployLink.setAttribute("target", "_blank");
-      projectHeaderDeployLink.setAttribute("aria-label", "Link para navegar até a pagina do projeto.")
       projectHeaderDeployLink.setAttribute(
-        "class",
-        "deploy-link"
+        "aria-label",
+        "Link para navegar até a pagina do projeto."
       );
+      projectHeaderDeployLink.setAttribute("class", "deploy-link");
       var projectHeaderDeployLinkIcon = document.createElement("img");
       projectHeaderDeployLinkIcon.setAttribute("src", "./assets/link.svg");
       projectHeaderDeployLinkIcon.setAttribute(
@@ -87,6 +84,10 @@ Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
     projectFooterStatsStarIcon.setAttribute("src", "./assets/star.svg");
     projectFooterStatsStarIcon.setAttribute("alt", "");
     var projectFooterStatsStarText = document.createElement("span");
+    projectFooterStatsStarText.setAttribute(
+      "aria-label",
+      "Quantidade de estrelas que o projeto tem."
+    );
     projectFooterStatsStarText.innerHTML = data.stargazers_count;
     projectFooterStatsStar.appendChild(projectFooterStatsStarIcon);
     projectFooterStatsStar.appendChild(projectFooterStatsStarText);
@@ -97,6 +98,10 @@ Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
     projectFooterStatsBranchIcon.setAttribute("src", "./assets/git-branch.svg");
     projectFooterStatsBranchIcon.setAttribute("alt", "");
     var projectFooterStatsBranchText = document.createElement("span");
+    projectFooterStatsBranchText.setAttribute(
+      "aria-label",
+      "Quantidade de branchs que o projeto tem."
+    );
     projectFooterStatsBranchText.innerHTML = branchCounter;
     projectFooterStatsBranch.appendChild(projectFooterStatsBranchIcon);
     projectFooterStatsBranch.appendChild(projectFooterStatsBranchText);
@@ -107,6 +112,7 @@ Promise.all(urls.map((u) => fetch(u))).then(async (responses) => {
     var projectFooterLanguageElipse = document.createElement("div");
     projectFooterLanguageElipse.setAttribute("class", "elipse");
     var projectFooterLanguageText = document.createElement("span");
+    projectFooterLanguageText.setAttribute("aria-label", "Linguagem mais utilizada no projeto.");
     projectFooterLanguageText.innerHTML = data.language;
 
     projectFooterLanguage.appendChild(projectFooterLanguageElipse);
