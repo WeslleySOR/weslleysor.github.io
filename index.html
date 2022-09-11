@@ -2,9 +2,26 @@
 <html lang="en">
   <head>
     <script src="main.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NF21SXG9VC"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-NF21SXG9VC");
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Portifólio Weslley Santos de Oliveira Ruas">
+    <meta
+      name="description"
+      content="Portifólio Weslley Santos de Oliveira Ruas"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/global.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,45 +35,77 @@
   </head>
   <body>
     <aside>
-      <div id="profile-picture-name-and-occupationarea" class="card-shadowed" aria-label="Minha foto, nome e ocupação.">
+      <div
+        id="profile-picture-name-and-occupationarea"
+        class="card-shadowed"
+        aria-label="Minha foto, nome e ocupação."
+      >
         <img
           src="https://avatars.githubusercontent.com/u/68085898?v=4"
           alt="WeslleySOR Github Profile Pic"
         />
         <div>
-          <h1 aria-label="Meu nome completo, com os nomes do meio abreviados.">Weslley S. O. Ruas</h1>
+          <h1 aria-label="Meu nome completo, com os nomes do meio abreviados.">
+            Weslley S. O. Ruas
+          </h1>
           <h2 aria-label="Minha ocupação.">Frontend Developer</h2>
         </div>
       </div>
-      <div id="profile-social-media" class="card-shadowed" aria-label="Minhas redes sociais.">
+      <div
+        id="profile-social-media"
+        class="card-shadowed"
+        aria-label="Minhas redes sociais."
+      >
         <div>
           <img src="./assets/map-pin.svg" alt="" />
           <span aria-label="País onde moro.">Brasil</span>
         </div>
         <div>
           <img src="./assets/briefcase.svg" alt="" />
-          <span aria-label="Minha disponibilidade para emprego.">Disponível</span>
+          <span aria-label="Minha disponibilidade para emprego."
+            >Disponível</span
+          >
         </div>
         <div>
           <img src="./assets/mail.svg" alt="" />
-          <span aria-label="Meu email para contato.">weslleysordev@gmail.com</span>
+          <span aria-label="Meu email para contato."
+            >weslleysordev@gmail.com</span
+          >
         </div>
         <div>
           <img src="./assets/github.svg" alt="" />
           <span aria-label="Meu usuário do github.">WeslleySOR</span>
-          <a href="https://github.com/WeslleySOR" target="_blank" aria-label="Navegar até meu github.">
-            <img src="./assets/link.svg" alt="Icone de navegação à links externos.">
+          <a
+            href="https://github.com/WeslleySOR"
+            target="_blank"
+            aria-label="Navegar até meu github."
+          >
+            <img
+              src="./assets/link.svg"
+              alt="Icone de navegação à links externos."
+            />
           </a>
         </div>
         <div>
           <img src="./assets/linkedin.svg" alt="" />
           <span aria-label="Meu usuário do linkedin.">weslleysor</span>
-          <a href="https://www.linkedin.com/in/weslleysor/" target="_blank" aria-label="Navegar até meu linkedin.">
-            <img src="./assets/link.svg" alt="Icone de navegação à links externos.">
+          <a
+            href="https://www.linkedin.com/in/weslleysor/"
+            target="_blank"
+            aria-label="Navegar até meu linkedin."
+          >
+            <img
+              src="./assets/link.svg"
+              alt="Icone de navegação à links externos."
+            />
           </a>
         </div>
       </div>
-      <div id="profile-technologies" class="card-shadowed" aria-label="Tecnologias que possuo conhecimento.">
+      <div
+        id="profile-technologies"
+        class="card-shadowed"
+        aria-label="Tecnologias que possuo conhecimento."
+      >
         <h1>Tecnologias</h1>
         <div>
           <div class="technology">
@@ -112,7 +161,11 @@
           </div>
         </div>
       </div>
-      <div id="profile-education" class="card-shadowed" aria-label="Meus cursos.">
+      <div
+        id="profile-education"
+        class="card-shadowed"
+        aria-label="Meus cursos."
+      >
         <h1>Educação</h1>
         <ul>
           <li>
@@ -126,7 +179,10 @@
       </div>
     </aside>
     <main>
-      <div id="profile-my-projects" aria-label="Projetos que considero importantes.">
+      <div
+        id="profile-my-projects"
+        aria-label="Projetos que considero importantes."
+      >
         <div id="profile-my-projects-header" class="card-shadowed">
           <h1>Meus Projetos</h1>
           <a
@@ -136,7 +192,10 @@
             >Veja todos</a
           >
         </div>
-        <div id="profile-my-projects-main" aria-label="Área onde estão os projetos."></div>
+        <div
+          id="profile-my-projects-main"
+          aria-label="Área onde estão os projetos."
+        ></div>
       </div>
     </main>
   </body>
