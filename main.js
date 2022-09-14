@@ -1,5 +1,4 @@
 const urls = [
-  "https://api.github.com/repos/WeslleySOR/front-end-challenge",
   "https://api.github.com/repos/WeslleySOR/mks-frontend-challenge",
   "https://api.github.com/repos/WeslleySOR/NLWTogether-letmeask",
   "https://api.github.com/repos/WeslleySOR/ignews",
